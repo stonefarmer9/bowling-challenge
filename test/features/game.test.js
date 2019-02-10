@@ -5,11 +5,11 @@ describe('It calculates scores from 20 rolls', () => {
     const game = new Game()
     var roll = 0
     do {
-      game.roll(0)
+      game.roll(1)
       roll += 1
     } while (roll <= 20)
 
-    expect(game.score()).toBe(0)
+    expect(game.score()).toBe(20)
   })
 
   test('it can return the score of a 10 round game',() => {
@@ -44,7 +44,7 @@ describe('It calculates scores from 20 rolls', () => {
     game.roll(3)
     game.roll(4)
 
-    expect(game.scorecard).toBe([ [ 1, 2 ], [ 3, 4] ]);
+    expect(game.scorecard).toEqual([ [ 1, 2 ], [ 3, 4] ]);
 
   })
 

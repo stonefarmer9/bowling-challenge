@@ -5,7 +5,8 @@ describe('#roll', () => {
   test('It stores the result of a roll', ()=> {
     game = new Game
     game.roll(10)
-    expect(game.scorecard).toEqual([ 10 ])
+    game.roll(10)
+    expect(game.scorecard).toEqual([ [10, 10] ])
   })
 })
 
@@ -15,7 +16,8 @@ describe('#score', () => {
     game.roll(5)
     game.roll(5)
     game.roll(5)
-    expect(game.score()).toEqual(15)
+    game.roll(5)
+    expect(game.score()).toEqual(20)
   })
 
 })
