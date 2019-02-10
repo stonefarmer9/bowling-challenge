@@ -10,6 +10,7 @@ class Game {
 
   score(){
     const add = (a,b) => a + b;
+    console.log(this.scorecard.reduce(add))
     return this.scorecard.reduce(add)
   }
 
