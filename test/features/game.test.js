@@ -97,5 +97,14 @@ describe('Frames', () => {
       expect(game.score()).toBe(24)
 
     })
+    test('Bonus points are awarded for two strikes in a row', ()=>{
+      const game = new Game()
+      game.roll(10)
+      game.roll(10)
+      game.roll(1)
+      game.roll(1)
+
+      expect(game.score()).toBe(35)
+    })
   })
 })
