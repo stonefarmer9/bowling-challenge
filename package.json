@@ -1,0 +1,22 @@
+{
+  "name": "bowling-challenge",
+  "version": "1.0.0",
+  "description": "bowling score card program, no front end planned",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stonefarmer9/bowling-challenge.git"
+  },
+  "author": "GLV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stonefarmer9/bowling-challenge/issues"
+  },
+  "homepage": "https://github.com/stonefarmer9/bowling-challenge#readme"
+}
