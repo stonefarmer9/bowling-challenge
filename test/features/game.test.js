@@ -1,4 +1,4 @@
-const Game = require('../scripts/game.js')
+const Game = require('../../scripts/game.js')
 
 const game = new Game()
 describe('It calculates scores from 20 rolls', () => {
