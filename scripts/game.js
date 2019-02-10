@@ -9,13 +9,9 @@ class Game {
   };
 
   score(){
-    var sum = 0;
-    for (var i = 0; i < this.scorecard.length; i++) {
-      sum += this.scorecard[i]
-    }
-    return sum
+    const add = (a,b) => a + b;
+    return this.scorecard.reduce(add)
   }
-
 
 
 };
