@@ -12,7 +12,7 @@ describe('It calculates scores from 20 rolls', () => {
     expect(game.score()).toBe(0)
   })
 
-  test('it can return the score of a 10 round game',() => {
+  test('it can return the score of a 10 round game', () => {
     const game = new Game()
     game.roll(1)
     game.roll(2)
@@ -39,19 +39,18 @@ describe('It calculates scores from 20 rolls', () => {
 })
 describe('Frames', () => {
   test('it arranges the rolls into frames', () => {
-    const game = new Game;
+    const game = new Game()
     game.roll(1)
     game.roll(2)
     game.roll(3)
     game.roll(4)
 
-    expect(game.scorecard).toEqual([ [ 1, 2 ], [ 3, 4] ]);
-
+    expect(game.scorecard).toEqual([[ 1, 2 ], [ 3, 4]])
   })
 
   describe('Spares', () => {
-    test('Bonus points are awarded for a spare', () =>{
-      const game = new Game;
+    test('Bonus points are awarded for a spare', () => {
+      const game = new Game()
       game.roll(5)
       game.roll(5)
       game.roll(5)
@@ -60,5 +59,4 @@ describe('Frames', () => {
       expect(game.score()).toBe(21)
     })
   })
-
 })
