@@ -103,7 +103,6 @@ describe('Frames', () => {
       game.roll(10)
       game.roll(1)
       game.roll(1)
-
       expect(game.score()).toBe(35)
     })
   })
