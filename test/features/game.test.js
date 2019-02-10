@@ -86,4 +86,16 @@ describe('Frames', () => {
 
     })
   })
+
+  describe('Strikes', ()=> {
+    test('Bonus points are awarded for strike', () => {
+      const game = new Game()
+      game.roll(10)
+      game.roll(5)
+      game.roll(2)
+
+      expect(game.score()).toBe(24)
+
+    })
+  })
 })
