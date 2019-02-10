@@ -36,7 +36,8 @@ describe('It calculates scores from 20 rolls', () => {
     game.roll(5)
     expect(game.score()).toBe(60)
   })
-
+})
+describe('Frames', () => {
   test('it arranges the rolls into frames', () => {
     const game = new Game;
     game.roll(1)
@@ -46,6 +47,18 @@ describe('It calculates scores from 20 rolls', () => {
 
     expect(game.scorecard).toEqual([ [ 1, 2 ], [ 3, 4] ]);
 
+  })
+
+  describe('Spares', () => {
+    test('Bonus points are awarded for a spare', () =>{
+      const game = new Game;
+      game.roll(5)
+      game.roll(5)
+      game.roll(5)
+      game.roll(1)
+
+      expect(game.score()).toBe(21)
+    })
   })
 
 })
