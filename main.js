@@ -1,5 +1,5 @@
 function foo () {
-  console.log(7 * 9)
+  return(10 * 9)
 };
 
-foo()
+module.exports = foo;
