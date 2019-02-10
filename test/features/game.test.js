@@ -5,11 +5,11 @@ describe('It calculates scores from 20 rolls', () => {
     const game = new Game()
     var roll = 0
     do {
-      game.roll(1)
+      game.roll(0)
       roll += 1
-    } while (roll <= 20)
+    } while (roll <= 0)
 
-    expect(game.score()).toBe(20)
+    expect(game.score()).toBe(0)
   })
 
   test('it can return the score of a 10 round game',() => {

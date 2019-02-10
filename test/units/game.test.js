@@ -14,10 +14,10 @@ describe('#score', () => {
   test('It returns the total score of the scorecard', () => {
     game = new Game
     game.roll(5)
+    game.roll(4)
     game.roll(5)
-    game.roll(5)
-    game.roll(5)
-    expect(game.score()).toEqual(20)
+    game.roll(4)
+    expect(game.score()).toEqual(18)
   })
 
 })
