@@ -15,7 +15,7 @@ class Game {
       this.frame.push(rollScore)
       if (this.frame.length === 2) {
         this.scorecard.push(this.frame)
-        if (this._frameScore() === 10) {
+        if (this._frameScore() >= 10) {
           this.spareBonus = true
         }
         this.frameNumber += 1
