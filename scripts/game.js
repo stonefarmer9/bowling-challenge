@@ -3,24 +3,39 @@ class Game {
   constructor () {
     this.scorecard = []
     this.frame = []
-    this.frameIndex = 0
     this.spareBonus = false
+    this.strikeBonus = false
+    this.strikeBonusCountUse = 0
   }
 
   roll (rollScore) {
-    if (this.spareBonus === true) {
+    if (rollScore == 10){
+      this.strikeBonus = true
+      this.frame.push(rollScore,0)
+      this.scorecard.push(this.frame)
+      this.frame = []
+    } else if (this.strikeBonus === true) {
+      this.frame.push(rollScore * 2)
+      this.strikeBonusCount =+1
+      if (this.strikeBonusCountUse === 2){
+        this.strikeBonus = false
+      }
+    } else if (this.spareBonus === true) {
       this.frame.push(rollScore * 2)
       this.spareBonus = false
     } else {
-      this.frame.push(rollScore)
+    this.frame.push(rollScore)
       if (this.frame.length === 2) {
         this.scorecard.push(this.frame)
         if (this._frameScore() >= 10) {
           this.spareBonus = true
         }
-        this.frameNumber += 1
         this.frame = []
+        }
       }
+      if (this.frame.length === 2) {
+        this.scorecard.push(this.frame)
+        this.frame = []
     }
   };
 
