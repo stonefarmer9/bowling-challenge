@@ -1,5 +1,5 @@
 function foo () {
-  return(10 * 9)
+  return (10 * 9)
 };
 
-module.exports = foo;
+module.exports = foo
