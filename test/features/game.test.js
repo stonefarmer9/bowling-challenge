@@ -70,5 +70,20 @@ describe('Frames', () => {
 
       expect(game.score()).toBe(28)
     })
+
+    test('Bonus points are awarded for 3 spares in a row', () => {
+      const game = new Game()
+      game.roll(5)
+      game.roll(5)
+      game.roll(5)
+      game.roll(5)
+      game.roll(5)
+      game.roll(5)
+      game.roll(1)
+      game.roll(1)
+
+      expect(game.score()).toBe(43)
+
+    })
   })
 })
